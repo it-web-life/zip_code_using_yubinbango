@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+p {
+  line-height: 2;
+}
+
+.header {
+  width: 100%;
+  background-color: #fff;
+}
+
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  padding: 20px 0;
+}
+@media screen and (max-width:767px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+}
+
+.container {
+  padding: 20px 0;
+  max-width: 960px;
+  margin: auto;
+}
+
+.heading-title {
+  font-size: 1.875rem;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading-title-inner {
+  position: relative;
+  display: inline-block;
+  margin: 0 2.5em;
+  padding: 0 1em;
+  text-align: left;
+}
+
+.heading-title-inner::before,
+.heading-title-inner::after {
+  position: absolute;
+  top: 50%;
+  content: '';
+  width: 400%;
+  height: 1px;
+  background-color: #ccc;
+}
+.heading-title-inner::before {
+  right: 100%;
+}
+
+.heading-title-inner::after {
+  left: 100%;
+}
+
+/* 郵便番号エリアのCSS */
+.contact {
+  margin: 20px auto 50px;
+  border: 1px solid #dedede;
+}
+
+.contact-item {
+  display: flex;
+}
+.contact-item:not(:last-child) {
+  border-bottom: 1px solid #dedede;
+}
+
+.contact-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 8em;
+  width: 20%;
+  padding: 10px;
+  background-color: #f3f3f3;
+}
+
+.contact-detail {
+  width: 80%;
+  padding: 10px;
+}
+
+.zipcode-mark {
+  padding-right: 10px;
+}
+
+.contact-item input[type="text"] {
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,.1);
+  border: 1px solid #ccc;
+  padding: 5px;
+  background-color: #fefefe;
+}
+
+.contact-detail-postcode input {
+  width: 8em;
+}
+@media screen and (max-width:767px) {
+  .contact-detail-postcode input {
+    width: auto;
+  }
+}
+
+.contact-detail-address input {
+  width: calc(100% - 10px);
+}
